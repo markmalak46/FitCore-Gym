@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+/* ===== Design Tokens (Tailwind v4) ===== */
+@theme {
+    --color-dark: #070A12;
+    --color-panel: rgba(255, 255, 255, .06);
+    --color-panel2: rgba(255, 255, 255, .04);
+    --color-border: rgba(255, 255, 255, .10);
+    --color-text: rgba(255, 255, 255, 1);
+    --color-muted: rgba(255, 255, 255, .70);
+    --color-muted2: rgba(255, 255, 255, .55);
+
+    --color-accent: #7C3AED;
+    --color-accent2: #22C55E;
+    --color-accent3: #38BDF8;
+
+    --radius-xl2: 18px;
+    --shadow-glow: 0 18px 50px rgba(0, 0, 0, .45);
+
+    --font-inter: "Inter", sans-serif;
+}
+
+/* smooth scroll + font */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-inter);
+}
+
+/* active state */
+header nav a.active {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  border-radius: 12px;
+  border: 0.5px solid #696969;
+}
+.to-top.show{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* float animation for chips */
+@keyframes floaty {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* ===== JS state helpers (NO @apply) ===== */
+#backdrop.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#mobileMenu.show {
+    transform: translateX(0);
+}
+
+#topbar.is-scrolled {
+    background: rgba(7, 10, 18, .85) !important;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, .35);
+}
+
+.qa.open+.qa-panel {
+    display: block;
+}
+
+.qa.open .qa-ico {
+    transform: rotate(45deg);
+}
+
+.to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}

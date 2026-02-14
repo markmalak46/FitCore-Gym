@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitCore Gym</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="./css/output.css">
+    <link rel="icon" type="image/x-icon" href="./images/ChatGPT Image Feb 13, 2026, 10_23_52 PM.png" />
+
+    <script src="index.js" defer></script>
+</head>
+
+<body class="m-0 bg-dark text-text">
+    <!-- HERO WRAP -->
+    <div id="top" class="relative overflow-hidden pt-24">
+        <!-- hero bg -->
+        <div class="pointer-events-none absolute inset-0 saturate-[1.1]" style="background:
+      radial-gradient(900px 500px at 12% 18%, rgba(124, 58, 237, .35), transparent 60%),
+      radial-gradient(900px 500px at 88% 22%, rgba(34, 197, 94, .22), transparent 60%),
+      radial-gradient(1100px 650px at 50% 78%, rgba(56, 189, 248, .16), transparent 65%),
+      linear-gradient(180deg, rgba(255, 255, 255, .04), transparent 35%);">
+        </div>
+
+        <!-- TOPBAR / NAVBAR -->
+        <header id="topbar"
+            class="fixed top-0 start-0 end-0 z-50 border-b border-white/10 bg-[rgba(7,10,18,.35)] py-4.5 backdrop-blur-md transition-[background,box-shadow,padding] duration-200 ease-in-out">
+            <div class="mx-auto flex w-[92%] max-w-280 items-center justify-between gap-3.5">
+                <a href="#top" aria-label="FitCore Home" class="inline-flex items-center gap-4">
+                    <span
+                        class="h-3.5 w-3.5 rounded-full bg-linear-to-br from-accent to-accent2 shadow-[0_0_0_10px_rgba(124,58,237,.15)]"></span>
+                    <span class="text-[28px] font-extrabold tracking-[.3px]">FitCore</span>
+                </a>
+
+                <!-- desktop nav -->
+<nav aria-label="Primary" class="hidden items-center gap-2.5 lg:flex">
+  <a
+    href="#choose"
+    class="relative rounded-xl px-3 py-2.5 text-[14px] font-semibold text-muted
+           border border-transparent
+           transition-all duration-200 ease-out
+           hover:text-text hover:bg-white/10 hover:border-white/15">
+    Why FitCore
+  </a>
+
+  <a
+    href="#programs"
+    class="relative rounded-xl px-3 py-2.5 text-[14px] font-semibold text-muted
+           border border-transparent
+           transition-all duration-200 ease-out
+           hover:text-text hover:bg-white/10 hover:border-white/15">
+    Programs
+  </a>
+
+  <a
+    href="#pricing"
+    class="relative rounded-xl px-3 py-2.5 text-[14px] font-semibold text-muted
+           border border-transparent
+           transition-all duration-200 ease-out
+           hover:text-text hover:bg-white/10 hover:border-white/15">
+    Pricing
+  </a>
+
+  <a
+    href="#trainers"
+    class="relative rounded-xl px-3 py-2.5 text-[14px] font-semibold text-muted
+           border border-transparent
+           transition-all duration-200 ease-out
+           hover:text-text hover:bg-white/10 hover:border-white/15">
+    Trainers
+  </a>
+
+  <a
+    href="#testimonials"
+    class="relative rounded-xl px-3 py-2.5 text-[14px] font-semibold text-muted
+           border border-transparent
+           transition-all duration-200 ease-out
+           hover:text-text hover:bg-white/10 hover:border-white/15">
+    Reviews
+  </a>
+
+  <a
+    href="#faq"
+    class="relative rounded-xl px-3 py-2.5 text-[14px] font-semibold text-muted
+           border border-transparent
+           transition-all duration-200 ease-out
+           hover:text-text hover:bg-white/10 hover:border-white/15">
+    FAQ
+  </a>
+</nav>
+
+
+                <div class="inline-flex items-center gap-2.5">
+                    <a href="#join"
+                        class="rounded-xl border border-white/15 bg-white/10 px-3.5 py-2.5 text-[14px] font-bold transition-transform duration-200 hover:-translate-y-px">
+                        Get Started
+                    </a>
+
+                    <!-- burger (mobile) -->
+                    <button id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"
+                        class="inline-flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl border border-white/15 bg-white/10 lg:hidden">
+                        <i class="fa-solid fa-bars text-[17px] text-white/90"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile Drawer -->
+        <div id="backdrop" aria-hidden="true"
+            class="fixed inset-0 z-50 bg-black/55 opacity-0 pointer-events-none transition-opacity duration-200">
+        </div>
+
+        <aside id="mobileMenu" aria-hidden="true"
+            class="fixed top-0 end-0 z-50 h-screen w-[min(360px,86vw)] translate-x-[105%] border-s border-white/10 bg-[rgba(7,10,18,.92)] p-3.5 backdrop-blur-md transition-transform duration-200">
+            <div class="flex items-center justify-between gap-2.5 border-b border-white/10 px-1.5 pt-2 pb-3.5">
+                <div class="inline-flex items-center gap-4">
+                    <span
+                        class="h-3.5 w-3.5 rounded-full bg-linear-to-br from-accent to-accent2 shadow-[0_0_0_10px_rgba(124,58,237,.15)]"></span>
+                    <span class="text-[28px] font-extrabold tracking-[.3px]">FitCore</span>
+                </div>
+                <button id="closeMenu" aria-label="Close menu"
+                    class="h-11 w-11 rounded-xl border border-white/15 bg-white/10 text-[18px] text-text">
+                    ✕
+                </button>
+            </div>
+
+            <div class="grid gap-2 px-1.5 py-3.5">
+                <a class="flex justify-center rounded-xl border border-white/10 bg-white/10 px-3 py-3 font-bold text-muted hover:bg-white/15 hover:text-text"
+                    href="#choose">Why FitCore</a>
+                <a class="flex justify-center rounded-xl border border-white/10 bg-white/10 px-3 py-3 font-bold text-muted hover:bg-white/15 hover:text-text"
+                    href="#programs">Programs</a>
+                <a class="flex justify-center rounded-xl border border-white/10 bg-white/10 px-3 py-3 font-bold text-muted hover:bg-white/15 hover:text-text"
+                    href="#pricing">Pricing</a>
+                <a class="flex justify-center rounded-xl border border-white/10 bg-white/10 px-3 py-3 font-bold text-muted hover:bg-white/15 hover:text-text"
+                    href="#trainers">Trainers</a>
+                <a class="flex justify-center rounded-xl border border-white/10 bg-white/10 px-3 py-3 font-bold text-muted hover:bg-white/15 hover:text-text"
+                    href="#gallery">Gallery</a>
+                <a class="flex justify-center rounded-xl border border-white/10 bg-white/10 px-3 py-3 font-bold text-muted hover:bg-white/15 hover:text-text"
+                    href="#testimonials">Reviews</a>
+                <a class="flex justify-center rounded-xl border border-white/10 bg-white/10 px-3 py-3 font-bold text-muted hover:bg-white/15 hover:text-text"
+                    href="#faq">FAQ</a>
+
+                <a class="mt-7.5 flex justify-center rounded-xl bg-linear-to-br from-accent2 to-accent3 px-3 py-3 font-extrabold text-[#0b0d13]"
+                    href="#join">Join Now</a>
+            </div>
+        </aside>
+
+        <!-- HERO CONTENT -->
+        <section
+            class="relative mx-auto mt-6 grid w-[92%] max-w-280 grid-cols-1 items-center gap-5 py-7 pb-15 lg:grid-cols-[1.15fr_1fr] lg:py-8 lg:pb-19">
+            <div>
+
+                <h1 class="my-3.5 mb-3 text-[clamp(34px,4.4vw,62px)] font-extrabold leading-[1.03] tracking-[-0.8px]">
+                    Transform your body.
+                    <span class="bg-linear-to-r from-accent via-accent2 to-accent3 bg-clip-text text-transparent">Own
+                        your
+                        energy.</span>
+                </h1>
+
+                <p class="mb-4.5 max-w-[54ch] text-[clamp(15px,1.6vw,18px)] leading-[1.7] text-muted">
+                    Join FitCore — a premium fitness facility with world-class equipment, expert trainers,
+                    and a community that actually shows up for you.
+                </p>
+
+                <!-- ✅ responsive fix: buttons full width on mobile -->
+                <div class="mt-2.5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                    <a href="#join"
+                        class="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-[14px] border border-transparent bg-linear-to-br from-accent2 to-accent3 px-8 py-4 text-[18px] font-extrabold tracking-[.2px] text-[#0b0d13] transition-transform duration-200 hover:scale-105">
+                        Start Your Journey
+                    </a>
+                    <a href="#choose"
+                        class="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-[14px] border border-white/20 bg-white/5 px-8 py-4 text-[18px] font-extrabold tracking-[.2px] text-text transition-transform duration-200 hover:scale-105 hover:bg-white/10">
+                        Explore Features
+                    </a>
+                </div>
+
+                <div class="mt-10 grid max-w-130 grid-cols-1 gap-3 sm:grid-cols-3">
+                    <div class="rounded-2xl border border-white/15 bg-white/5 px-3.5 py-3.5 text-center">
+                        <span class="block text-[18px] font-black">2500+</span>
+                        <span class="mt-1.5 block text-[12px] font-semibold text-muted2">Active Members</span>
+                    </div>
+                    <div class="rounded-2xl border border-white/15 bg-white/5 px-3.5 py-3.5 text-center">
+                        <span class="block text-[18px] font-black">15+</span>
+                        <span class="mt-1.5 block text-[12px] font-semibold text-muted2">Expert Trainers</span>
+                    </div>
+                    <div class="rounded-2xl border border-white/15 bg-white/5 px-3.5 py-3.5 text-center">
+                        <span class="block text-[18px] font-black">4.9</span>
+                        <span class="mt-1.5 block text-[12px] font-semibold text-muted2">Avg. Rating</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- hero media -->
+            <div class="relative">
+                <div class="overflow-hidden rounded-xl2 border border-white/15 bg-white/10 shadow-glow">
+                    <img class="h-90 w-full object-cover lg:h-120" src="./images/hero-section-img.png"
+                        alt="FitCore Gym" />
+                    <div
+                        class="absolute start-4 end-4 bottom-4 rounded-2xl border border-white/20 bg-black/45 p-3.5 backdrop-blur-2.5">
+                        <div class="font-black tracking-[.2px]">Train smarter</div>
+                        <div class="mt-1 text-[13px] text-muted">Programs tailored to your goal.</div>
+                    </div>
+                </div>
+
+                <!-- floating chips -->
+                <div class="absolute top-4.5 -start-2.5 hidden items-center gap-2.5 rounded-full border border-white/15 bg-white/10 px-3 py-2.5 text-[13px] font-bold text-muted backdrop-blur-md sm:inline-flex"
+                    style="animation: floaty 4.8s ease-in-out infinite;">
+                    <span class="h-2 w-2 rounded-full bg-linear-to-br from-accent to-accent2"></span>
+                    Strength & Conditioning
+                </div>
+
+                <div class="absolute -end-3 bottom-6.5 hidden items-center gap-2.5 rounded-full border border-white/15 bg-white/10 px-3 py-2.5 text-[13px] font-bold text-muted backdrop-blur-md sm:inline-flex"
+                    style="animation: floaty 4.8s ease-in-out infinite; animation-delay: .8s;">
+                    <span class="h-2 w-2 rounded-full bg-linear-to-br from-accent to-accent2"></span>
+                    Nutrition Guidance
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- WHY CHOOSE -->
+    <section id="choose" class="mx-auto w-[92%] max-w-280 py-19.5">
+        <div class="mb-17.5 text-center">
+            <h2 class="mb-2.5 text-[clamp(24px,2.8vw,40px)] font-extrabold tracking-[-.4px]">Why Choose FitCore</h2>
+            <p class="mx-auto max-w-[70ch] leading-[1.7] text-muted">
+                Everything you need to hit your goals — without the noise. Clean facility,
+                elite gear, real coaching, and a supportive community.
+            </p>
+        </div>
+
+        <div class="my-12.5 mb-20 grid grid-cols-1 gap-4.5 lg:grid-cols-3">
+            <article
+                class="relative overflow-hidden rounded-xl2 border border-white/15 bg-white/5 p-4.5 shadow-[0_18px_45px_rgba(0,0,0,.22)] transition duration-200 hover:-translate-y-1 hover:bg-white/10 hover:border-white/20">
+                <div class="pointer-events-none absolute -inset-0.5"
+                    style="background: radial-gradient(500px 150px at 20% 0%, rgba(56,189,248,.16), transparent 60%);">
+                </div>
+
+                <div class="relative flex items-center gap-2">
+                    <div class="h-4.5 w-4.5 rounded-full bg-[rgba(56,189,248,.55)]"></div>
+                    <h3 class="text-[18px] font-bold">Premium Equipment</h3>
+                </div>
+                <p class="relative mt-2.5 leading-[1.7] text-muted">
+                    Top-brand machines and free weights — maintained daily for performance and safety.
+                </p>
+            </article>
+
+            <article
+                class="relative overflow-hidden rounded-xl2 border border-white/15 bg-white/5 p-4.5 shadow-[0_18px_45px_rgba(0,0,0,.22)] transition duration-200 hover:-translate-y-1 hover:bg-white/10 hover:border-white/20">
+                <div class="pointer-events-none absolute -inset-0.5"
+                    style="background: radial-gradient(500px 150px at 20% 0%, rgba(56,189,248,.16), transparent 60%);">
+                </div>
+
+                <div class="relative flex items-center gap-2">
+                    <div class="h-4.5 w-4.5 rounded-full bg-[rgba(34,197,94,.55)]"></div>
+                    <h3 class="text-[18px] font-bold">Expert Trainers</h3>
+                </div>
+                <p class="relative mt-2.5 leading-[1.7] text-muted">
+                    Certified coaches who build plans around your body, lifestyle, and progress.
+                </p>
+            </article>
+
+            <article
+                class="relative overflow-hidden rounded-xl2 border border-white/15 bg-white/5 p-4.5 shadow-[0_18px_45px_rgba(0,0,0,.22)] transition duration-200 hover:-translate-y-1 hover:bg-white/10 hover:border-white/20">
+                <div class="pointer-events-none absolute -inset-0.5"
+                    style="background: radial-gradient(500px 150px at 20% 0%, rgba(56,189,248,.16), transparent 60%);">
+                </div>
+
+                <div class="relative flex items-center gap-2">
+                    <div class="h-4.5 w-4.5 rounded-full bg-[rgba(124,58,237,.55)]"></div>
+                    <h3 class="text-[18px] font-bold">Flexible Hours</h3>
+                </div>
+                <p class="relative mt-2.5 leading-[1.7] text-muted">
+                    Open 24/7 so your training fits your schedule — not the other way around.
+                </p>
+            </article>
+        </div>
+
+        <div class="mt-8.5 grid grid-cols-1 gap-6.5 lg:grid-cols-2">
+            <div>
+                <img class="h-90 w-full rounded-xl2 border border-white/15 object-cover shadow-glow lg:h-105"
+                    src="./images/why-choose-us.png" alt="why choose us image" />
+            </div>
+
+            <div>
+                <h3 class="mb-2.5 text-[clamp(20px,2vw,30px)] font-extrabold">More Than Just a Gym</h3>
+
+                <div class="my-4.5 rounded-2xl border border-white/15 bg-white/10 p-3.5">
+                    <h4 class="mb-2.5 text-[16px] font-bold">Group Classes</h4>
+                    <p class="leading-normal text-muted">High-energy classes led by certified instructors — beginners
+                        welcome.</p>
+                </div>
+
+                <div class="my-4.5 rounded-2xl border border-white/15 bg-white/10 p-3.5">
+                    <h4 class="mb-2.5 text-[16px] font-bold">Nutrition Guidance</h4>
+                    <p class="leading-normal text-muted">Simple meal strategies that match your training — no extreme
+                        diets.</p>
+                </div>
+
+                <div class="my-4.5 rounded-2xl border border-white/15 bg-white/10 p-3.5">
+                    <h4 class="mb-2.5 text-[16px] font-bold">Recovery Zone</h4>
+                    <p class="leading-normal text-muted">Stretching + mobility + recovery tools so your body stays
+                        consistent.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAMS (soft section) -->
+    <section id="programs" class="border-y border-white/10 py-19.5" style="background:
+      radial-gradient(900px 500px at 20% 10%, rgba(124,58,237,.18), transparent 60%),
+      radial-gradient(900px 500px at 80% 20%, rgba(34,197,94,.10), transparent 60%),
+      rgba(255,255,255,.02);">
+        <div class="mx-auto w-[92%] max-w-280">
+            <div class="mb-17.5 text-center">
+                <h2 class="mb-2.5 text-[clamp(24px,2.8vw,40px)] font-extrabold tracking-[-.4px]">Programs That
+                    Actually Work
+                </h2>
+                <p class="mx-auto max-w-[70ch] leading-[1.7] text-muted">Choose a track. We handle structure,
+                    progression, and
+                    accountability.</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4.5 lg:grid-cols-3">
+                <article
+                    class="rounded-xl2 border border-white/15 bg-white/5 p-4 shadow-[0_18px_45px_rgba(0,0,0,.22)] transition duration-200 hover:-translate-y-1 hover:bg-white/5 hover:border-[rgba(34,197,94,.55)]">
+                    <div class="flex flex-wrap justify-between gap-2">
+                        <span
+                            class="rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-[12px] font-bold text-[rgba(56,189,248,1)]">Beginner</span>
+                        <span
+                            class="rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-[12px] font-bold text-text">3
+                            days/week</span>
+                    </div>
+                    <h3 class="my-6 mb-2.5 text-center text-[26px] font-extrabold">Lean Start</h3>
+                    <p class="leading-[1.7] text-muted">Build consistency, fix form, and drop fat without burning out.
+                    </p>
+                    <ul class="mt-3 list-disc pl-4.5 font-semibold leading-[1.9] text-muted">
+                        <li>Technique coaching</li>
+                        <li>Simple meal guide</li>
+                        <li>Progress tracking</li>
+                    </ul>
+                    <a class="mt-3 inline-block text-[15px] text-[rgba(56,189,248,.92)]" href="#join">Join this program
+                        →</a>
+                </article>
+
+                <article
+                    class="rounded-xl2 border border-[rgba(34,197,94,.55)] bg-white/5 p-4 transition duration-200 hover:-translate-y-1 hover:bg-white/5">
+                    <div class="flex flex-wrap justify-between gap-2">
+                        <span
+                            class="rounded-full border border-white/15 bg-white/10 px-2.5 py-1 text-[12px] font-bold text-[rgba(34,197,94,1)]">Most
+                            Popular</span>
+                        <span
+                            class="rounded-full border border-white/15 bg-white/10 px-2.5 py-1 text-[12px] font-bold text-text">4–5
+                            days/week</span>
+                    </div>
+                    <h3 class="my-6 mb-2.5 text-center text-[26px] font-extrabold">Build & Burn</h3>
+                    <p class="leading-[1.7] text-muted">Strength + conditioning for muscle tone and high energy.</p>
+                    <ul class="mt-3 list-disc pl-4.5 font-semibold leading-[1.9] text-muted">
+                        <li>Progressive overload</li>
+                        <li>Recovery protocol</li>
+                        <li>Coach check-ins</li>
+                    </ul>
+                    <a class="mt-3 inline-block text-[15px] text-[rgba(56,189,248,.92)]" href="#join">Join this program
+                        →</a>
+                </article>
+
+                <article
+                    class="rounded-xl2 border border-white/15 bg-white/5 p-4 shadow-[0_18px_45px_rgba(0,0,0,.22)] transition duration-200 hover:-translate-y-1 hover:bg-white/5 hover:border-[rgba(34,197,94,.55)]">
+                    <div class="flex flex-wrap justify-between gap-2">
+                        <span
+                            class="rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-[12px] font-bold text-[rgba(124,58,237,1)]">Advanced</span>
+                        <span
+                            class="rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-[12px] font-bold text-text">Athletic</span>
+                    </div>
+                    <h3 class="my-6 mb-2.5 text-center text-[26px] font-extrabold">Performance</h3>
+                    <p class="leading-[1.7] text-muted">Train for speed, power, endurance, and mobility.</p>
+                    <ul class="mt-3 list-disc pl-4.5 font-semibold leading-[1.9] text-muted">
+                        <li>Periodized plan</li>
+                        <li>Power sessions</li>
+                        <li>Mobility work</li>
+                    </ul>
+                    <a class="mt-3 inline-block text-[15px] text-[rgba(56,189,248,.92)]" href="#join">Join this program
+                        →</a>
+                </article>
+            </div>
+
+            <div
+                class="mt-8 flex flex-col gap-3 rounded-xl2 border border-white/15 bg-white/5 p-4 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+                <div>
+                    <h3 class="mb-1 text-[18px] font-extrabold">Not sure what fits you?</h3>
+                    <p class="leading-[1.6] text-muted">Tell us your goal, and we’ll recommend the best plan.</p>
+                </div>
+                <a href="#join"
+                    class="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-[14px] border border-transparent bg-linear-to-br from-accent2 to-accent3 px-8 py-3 text-[18px] font-extrabold tracking-[.2px] text-[#0b0d13] transition-transform duration-200 hover:scale-105">
+                    Get Recommendation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="mx-auto w-[92%] max-w-280 py-19.5">
+        <div class="mb-17.5 text-center">
+            <h2 class="mb-2.5 text-[clamp(24px,2.8vw,40px)] font-extrabold tracking-[-.4px]">Membership Plans</h2>
+            <p class="mx-auto max-w-[70ch] leading-[1.7] text-muted">Simple pricing. Upgrade anytime. No hidden fees.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-4.5 lg:grid-cols-3">
+            <article
+                class="flex flex-col justify-between gap-8 rounded-xl2 border border-white/15 bg-white/5 p-4 shadow-[0_18px_45px_rgba(0,0,0,.22)] transition duration-200 hover:-translate-y-1 hover:bg-white/5 hover:border-white/20">
+                <div>
+                    <h3 class="text-[22px] font-extrabold">Basic</h3>
+                    <p class="mt-1 text-muted">Gym access + essentials</p>
+                    <div class="my-3 flex items-baseline gap-2">
+                        <span class="text-[38px] font-black tracking-[-1px]">$29</span>
+                        <span class="font-bold text-muted2">/month</span>
+                    </div>
+                    <ul class="list-disc pl-4.5 font-semibold leading-[1.9] text-muted">
+                        <li>24/7 Gym access</li>
+                        <li>Free orientation</li>
+                        <li>Monthly progress check</li>
+                    </ul>
+                </div>
+                <a class="w-full rounded-[14px] border border-white/20 bg-white/5 px-8 py-3 text-center text-[18px] font-extrabold text-text transition-transform duration-200 hover:scale-105 hover:bg-white/10"
+                    href="#join">Choose Basic</a>
+            </article>
+
+            <article
+                class="relative flex flex-col justify-between gap-8 rounded-xl2 border border-[rgba(34,197,94,.55)] bg-white/5 p-4 transition duration-200 hover:-translate-y-1 hover:bg-white/5">
+                <div
+                    class="absolute top-3.5 end-3.5 rounded-full border px-2.5 py-2 text-[12px] font-black text-[rgba(34,197,94,.95)]">
+                    Best Value
+                </div>
+
+                <div>
+                    <h3 class="text-[22px] font-extrabold">Premium</h3>
+                    <p class="mt-1 text-muted">Coaching + classes</p>
+                    <div class="my-3 flex items-baseline gap-2">
+                        <span class="text-[38px] font-black tracking-[-1px]">$49</span>
+                        <span class="font-bold text-muted2">/month</span>
+                    </div>
+                    <ul class="list-disc pl-4.5 font-semibold leading-[1.9] text-muted">
+                        <li>Everything in Basic</li>
+                        <li>Weekly group classes</li>
+                        <li>Nutrition guidance</li>
+                        <li>Recovery zone access</li>
+                    </ul>
+                </div>
+                <a class="w-full rounded-[14px] bg-linear-to-br from-accent2 to-accent3 px-8 py-3 text-center text-[18px] font-extrabold text-[#0b0d13] transition-transform duration-200 hover:scale-105"
+                    href="#join">Choose Premium</a>
+            </article>
+
+            <article
+                class="flex flex-col justify-between gap-8 rounded-xl2 border border-white/15 bg-white/5 p-4 shadow-[0_18px_45px_rgba(0,0,0,.22)] transition duration-200 hover:-translate-y-1 hover:bg-white/5 hover:border-white/20">
+                <div>
+                    <h3 class="text-[22px] font-extrabold">VIP</h3>
+                    <p class="mt-1 text-muted">1:1 coaching</p>
+                    <div class="my-3 flex items-baseline gap-2">
+                        <span class="text-[38px] font-black tracking-[-1px]">$79</span>
+                        <span class="font-bold text-muted2">/month</span>
+                    </div>
+                    <ul class="list-disc pl-4.5 font-semibold leading-[1.9] text-muted">
+                        <li>Everything in Premium</li>
+                        <li>Personal training sessions</li>
+                        <li>Custom plan + check-ins</li>
+                        <li>Priority support</li>
+                    </ul>
+                </div>
+                <a class="w-full rounded-[14px] border border-white/20 bg-white/10 px-8 py-3 text-center text-[18px] font-extrabold text-text transition-transform duration-200 hover:scale-105 hover:bg-white/10"
+                    href="#join">Choose VIP</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- TRAINERS (soft) -->
+    <section id="trainers" class="border-y border-white/10 py-19.5" style="background:
+      radial-gradient(900px 500px at 20% 10%, rgba(124,58,237,.18), transparent 60%),
+      radial-gradient(900px 500px at 80% 20%, rgba(34,197,94,.10), transparent 60%),
+      rgba(255,255,255,.02);">
+        <div class="mx-auto w-[92%] max-w-280">
+            <div class="mb-17.5 text-center">
+                <h2 class="mb-2.5 text-[clamp(24px,2.8vw,40px)] font-extrabold tracking-[-.4px]">Meet Our Coaches
+                </h2>
+                <p class="mx-auto max-w-[70ch] leading-[1.7] text-muted">Certified. Experienced. Focused on form and
+                    long-term
+                    progress.</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4.5 lg:grid-cols-3">
+                <article
+                    class="overflow-hidden rounded-xl2 border border-white/15 bg-white/5 shadow-[0_18px_45px_rgba(0,0,0,.22)] transition duration-200 hover:-translate-y-1 hover:bg-white/10 hover:border-[rgba(34,197,94,.55)]">
+                    <div class="overflow-hidden">
+                        <img class="h-75 w-full object-cover transition duration-300 hover:scale-[1.08]"
+                            src="./images/avatar-5.png" alt="Coach Alex" />
+                    </div>
+                    <div class="p-3.5">
+                        <h3 class="text-[24px] font-semibold">Coach Alex</h3>
+                        <p class="text-muted2">Strength • Hypertrophy</p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span
+                                class="rounded-full border border-white/15 bg-white/5 px-2.5 py-2 text-[12px] font-bold text-muted">Form</span>
+                            <span
+                                class="rounded-full border border-white/15 bg-white/5 px-2.5 py-2 text-[12px] font-bold text-muted">Progression</span>
+                            <span
+                                class="rounded-full border border-white/15 bg-white/5 px-2.5 py-2 text-[12px] font-bold text-muted">Discipline</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article
+                    class="overflow-hidden rounded-xl2 border border-white/15 bg-white/5 shadow-[0_18px_45px_rgba(0,0,0,.22)] transition duration-200 hover:-translate-y-1 hover:bg-white/10 hover:border-[rgba(34,197,94,.55)]">
+                    <div class="overflow-hidden">
+                        <img class="h-75 w-full object-cover transition duration-300 hover:scale-[1.08]"
+                            src="./images/avatar-6.png" alt="Coach Maya" />
+                    </div>
+                    <div class="p-3.5">
+                        <h3 class="text-[24px] font-semibold">Coach Maya</h3>
+                        <p class="text-muted2">HIIT • Conditioning</p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span
+                                class="rounded-full border border-white/15 bg-white/5 px-2.5 py-2 text-[12px] font-bold text-muted">Energy</span>
+                            <span
+                                class="rounded-full border border-white/15 bg-white/5 px-2.5 py-2 text-[12px] font-bold text-muted">Fat
+                                Loss</span>
+                            <span
+                                class="rounded-full border border-white/15 bg-white/5 px-2.5 py-2 text-[12px] font-bold text-muted">Cardio</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article
+                    class="overflow-hidden rounded-xl2 border border-white/15 bg-white/5 shadow-[0_18px_45px_rgba(0,0,0,.22)] transition duration-200 hover:-translate-y-1 hover:bg-white/10 hover:border-[rgba(34,197,94,.55)]">
+                    <div class="overflow-hidden">
+                        <img class="h-75 w-full object-cover transition duration-300 hover:scale-[1.08]"
+                            src="./images/avatar-4.png" alt="Coach Omar" />
+                    </div>
+                    <div class="p-3.5">
+                        <h3 class="text-[24px] font-semibold">Coach Omar</h3>
+                        <p class="text-muted2">Mobility • Recovery</p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span
+                                class="rounded-full border border-white/15 bg-white/5 px-2.5 py-2 text-[12px] font-bold text-muted">Stretch</span>
+                            <span
+                                class="rounded-full border border-white/15 bg-white/5 px-2.5 py-2 text-[12px] font-bold text-muted">Joints</span>
+                            <span
+                                class="rounded-full border border-white/15 bg-white/5 px-2.5 py-2 text-[12px] font-bold text-muted">Consistency</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="mx-auto w-[92%] max-w-280 py-19.5">
+        <div class="mb-17.5 text-center">
+            <h2 class="mb-2.5 text-[clamp(24px,2.8vw,40px)] font-extrabold tracking-[-.4px]">Inside FitCore</h2>
+            <p class="mx-auto max-w-[70ch] leading-[1.7] text-muted">Replace these images with your gym photos for an
+                instant
+                “premium” feel.</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-6">
+            <div
+                class="overflow-hidden rounded-xl2 border border-white/15 bg-white/10 shadow-[0_18px_45px_rgba(0,0,0,.18)] lg:col-span-2">
+                <img class="h-40 w-full object-cover transition duration-200 hover:scale-[1.06]"
+                    src="./images/hero-section-img.png" alt="Gallery 1" />
+            </div>
+            <div
+                class="overflow-hidden rounded-xl2 border border-white/15 bg-white/10 shadow-[0_18px_45px_rgba(0,0,0,.18)] lg:col-span-2">
+                <img class="h-40 w-full object-cover transition duration-200 hover:scale-[1.06]" src="./images/gym1.png"
+                    alt="Gallery 2" />
+            </div>
+            <div
+                class="overflow-hidden rounded-xl2 border border-white/15 bg-white/10 shadow-[0_18px_45px_rgba(0,0,0,.18)] lg:col-span-2">
+                <img class="h-40 w-full object-cover transition duration-200 hover:scale-[1.06]" src="./images/gym2.png"
+                    alt="Gallery 3" />
+            </div>
+            <div
+                class="overflow-hidden rounded-xl2 border border-white/15 bg-white/10 shadow-[0_18px_45px_rgba(0,0,0,.18)] lg:col-span-2">
+                <img class="h-40 w-full object-cover transition duration-200 hover:scale-[1.06]"
+                    src="./images/why-choose-us.png" alt="Gallery 4" />
+            </div>
+            <div
+                class="overflow-hidden rounded-xl2 border border-white/15 bg-white/10 shadow-[0_18px_45px_rgba(0,0,0,.18)] lg:col-span-2">
+                <img class="h-40 w-full object-cover transition duration-200 hover:scale-[1.06]" src="./images/gym3.png"
+                    alt="Gallery 5" />
+            </div>
+            <div
+                class="overflow-hidden rounded-xl2 border border-white/15 bg-white/10 shadow-[0_18px_45px_rgba(0,0,0,.18)] lg:col-span-2">
+                <img class="h-40 w-full object-cover transition duration-200 hover:scale-[1.06]" src="./images/gym4.jpg"
+                    alt="Gallery 6" />
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS (soft) -->
+    <section id="testimonials" class="border-y border-white/10 py-19.5" style="background:
+      radial-gradient(900px 500px at 20% 10%, rgba(124,58,237,.18), transparent 60%),
+      radial-gradient(900px 500px at 80% 20%, rgba(34,197,94,.10), transparent 60%),
+      rgba(255,255,255,.02);">
+        <div class="mx-auto w-[92%] max-w-280">
+            <div class="mb-17.5 text-center">
+                <h2 class="mb-2.5 text-[clamp(24px,2.8vw,40px)] font-extrabold tracking-[-.4px]">What Our Members Say
+                </h2>
+                <p class="mx-auto max-w-[70ch] leading-[1.7] text-muted">Real results from people who committed to the
+                    process —
+                    and stayed consistent.</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4.5 lg:grid-cols-3">
+                <article
+                    class="rounded-xl2 border border-white/15 bg-white/10 p-4 shadow-[0_18px_45px_rgba(0,0,0,.22)] transition duration-200 hover:-translate-y-1 hover:bg-white/10 hover:border-white/20">
+                    <div class="mb-3 flex items-center gap-3">
+                        <img class="h-13 w-13 rounded-full border border-white/20 object-cover"
+                            src="./images/avatar-1.jpg" alt="David Martinez" />
+                        <div>
+                            <h4 class="text-[16px] font-bold">David Martinez</h4>
+                            <p class="text-[13px] text-muted2">Lost 35 lbs in 5 months</p>
+                        </div>
+                    </div>
+                    <div class="leading-[1.8] text-muted">
+                        “FitCore completely changed my life. The trainers are amazing and the community is so
+                        supportive.”
+                    </div>
+                </article>
+
+                <article
+                    class="rounded-xl2 border border-white/15 bg-white/10 p-4 shadow-[0_18px_45px_rgba(0,0,0,.22)] transition duration-200 hover:-translate-y-1 hover:bg-white/10 hover:border-white/20">
+                    <div class="mb-3 flex items-center gap-3">
+                        <img class="h-13 w-13 rounded-full border border-white/20 object-cover"
+                            src="./images/avatar-2.jpg" alt="Mike Chen" />
+                        <div>
+                            <h4 class="text-[16px] font-bold">Mike Chen</h4>
+                            <p class="text-[13px] text-muted2">Gained 15 lbs muscle</p>
+                        </div>
+                    </div>
+                    <div class="leading-[1.8] text-muted">
+                        “The equipment is top-notch and always clean. Being open 24/7 means I can work out whenever it
+                        fits.”
+                    </div>
+                </article>
+
+                <article
+                    class="rounded-xl2 border border-white/15 bg-white/10 p-4 shadow-[0_18px_45px_rgba(0,0,0,.22)] transition duration-200 hover:-translate-y-1 hover:bg-white/10 hover:border-white/20">
+                    <div class="mb-3 flex items-center gap-3">
+                        <img class="h-13 w-13 rounded-full border border-white/20 object-cover"
+                            src="./images/avatar-3.jpg" alt="James Rodriguez" />
+                        <div>
+                            <h4 class="text-[16px] font-bold">James Rodriguez</h4>
+                            <p class="text-[13px] text-muted2">Marathon finisher</p>
+                        </div>
+                    </div>
+                    <div class="leading-[1.8] text-muted">
+                        “The personal training sessions helped me train for my first marathon. The expertise is
+                        unmatched.”
+                    </div>
+                </article>
+            </div>
+
+            <div
+                class="mt-6.5 grid grid-cols-2 gap-4.5 rounded-xl2 border border-white/15 bg-white/10 p-4 lg:grid-cols-4">
+                <div class="rounded-2xl border border-white/10 bg-white/10 p-3.5 text-center">
+                    <span class="block text-[22px] font-black">2500+</span>
+                    <p class="mt-1 text-[13px] font-semibold text-muted2">Active Members</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/10 p-3.5 text-center">
+                    <span class="block text-[22px] font-black">15+</span>
+                    <p class="mt-1 text-[13px] font-semibold text-muted2">Expert Trainers</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/10 p-3.5 text-center">
+                    <span class="block text-[22px] font-black">50+</span>
+                    <p class="mt-1 text-[13px] font-semibold text-muted2">Group Classes</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/10 p-3.5 text-center">
+                    <span class="block text-[22px] font-black">24/7</span>
+                    <p class="mt-1 text-[13px] font-semibold text-muted2">Access Hours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="mx-auto w-[92%] max-w-280 py-19.5">
+        <div class="mb-17.5 text-center">
+            <h2 class="mb-2.5 text-[clamp(24px,2.8vw,40px)] font-extrabold tracking-[-.4px]">FAQ</h2>
+            <p class="mx-auto max-w-[70ch] leading-[1.7] text-muted">Quick answers. No fluff.</p>
+        </div>
+
+        <div class="mx-auto grid max-w-215 gap-3">
+
+            <!-- ITEM -->
+            <div
+                class="faq-item overflow-hidden  rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-[0_20px_70px_rgba(0,0,0,.45)]">
+                <button
+                    class="qa w-full flex items-center cursor-pointer justify-between gap-4 px-6 py-4 text-start hover:bg-white/5"
+                    type="button" aria-expanded="false" data-open="false">
+                    <span class="text-[18px] font-bold text-text">Is FitCore good for beginners?</span>
+
+                    <span class="qa-ico inline-flex h-10 w-10 shrink-0 items-center justify-center
+         rounded-xl border border-white/15 bg-white/5
+         text-[18px] font-black text-text
+         transition-transform duration-300 ease-out">
+                        +
+                    </span>
+
+                </button>
+
+                <div class="qa-panel hidden border-t border-white/10 px-6 py-4 text-[18px] leading-[1.9] text-muted">
+                    Yes. We start you with simple routines, teach form, and scale intensity safely.
+                </div>
+            </div>
+
+            <!-- ITEM -->
+            <div
+                class="faq-item overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-[0_20px_70px_rgba(0,0,0,.45)]">
+                <button
+                    class="qa w-full flex items-center cursor-pointer justify-between gap-4 px-6 py-4 text-start hover:bg-white/5"
+                    type="button" aria-expanded="false" data-open="false">
+                    <span class="text-[18px] font-bold text-text">Do you offer personal training?</span>
+
+                    <span class="qa-ico inline-flex h-10 w-10 shrink-0 items-center justify-center
+         rounded-xl border border-white/15 bg-white/5
+         text-[18px] font-black text-text
+         transition-transform duration-300 ease-out">
+                        +
+                    </span>
+
+                </button>
+
+                <div class="qa-panel hidden border-t border-white/10 px-6 py-4 text-[18px] leading-[1.9] text-muted">
+                    Yes. VIP includes 1:1 sessions, or you can add sessions to any plan.
+                </div>
+            </div>
+
+            <!-- ITEM -->
+            <div
+                class="faq-item overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-[0_20px_70px_rgba(0,0,0,.45)]">
+                <button
+                    class="qa w-full flex items-center cursor-pointer justify-between gap-4 px-6 py-4 text-start hover:bg-white/5"
+                    type="button" aria-expanded="false" data-open="false">
+                    <span class="text-[18px] font-bold text-text">Can I cancel anytime?</span>
+
+                    <span class="qa-ico inline-flex h-10 w-10 shrink-0 items-center justify-center
+         rounded-xl border border-white/15 bg-white/5
+         text-[18px] font-black text-text
+         transition-transform duration-300 ease-out">
+                        +
+                    </span>
+
+                </button>
+
+                <div class="qa-panel hidden border-t border-white/10 px-6 py-4 text-[18px] leading-[1.9] text-muted">
+                    Monthly plans can be canceled anytime before renewal.
+                </div>
+            </div>
+
+            <!-- ITEM -->
+            <div
+                class="faq-item overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-[0_20px_70px_rgba(0,0,0,.45)]">
+                <button
+                    class="qa w-full flex items-center cursor-pointer justify-between gap-4 px-6 py-4 text-start hover:bg-white/5"
+                    type="button" aria-expanded="false" data-open="false">
+                    <span class="text-[18px] font-bold text-text">What about nutrition?</span>
+
+                    <span class="qa-ico inline-flex h-10 w-10 shrink-0 items-center justify-center
+         rounded-xl border border-white/15 bg-white/5
+         text-[18px] font-black text-text
+         transition-transform duration-300 ease-out">
+                        +
+                    </span>
+
+                </button>
+
+                <div class="qa-panel hidden border-t border-white/10 px-6 py-6 text-[18px] leading-[1.9] text-muted">
+                    Premium & VIP include nutrition guidance with simple meal strategies you can stick to.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- JOIN -->
+    <section id="join" class="mx-auto w-[92%] max-w-280 py-19.5">
+        <div class="mb-17.5 text-center">
+            <h2 class="mb-2.5 text-[clamp(24px,2.8vw,40px)] font-extrabold tracking-[-.4px]">Ready to Start Your
+                Fitness
+                Journey?</h2>
+            <p class="mx-auto max-w-[70ch] leading-[1.7] text-muted">Get access to premium facilities, expert guidance,
+                and a
+                community that supports your goals.</p>
+        </div>
+
+        <div
+            class="overflow-hidden rounded-[22px] border border-white/15 bg-white/5 shadow-[0_22px_70px_rgba(0,0,0,.35)]">
+            <form class="mx-auto w-[92%] max-w-205 py-5.5 pb-7">
+                <div class="grid grid-cols-1 gap-3.5 lg:grid-cols-2">
+                    <div class="my-3.5">
+                        <label class="mb-2 block text-[14px] font-bold text-white/90" for="firstName">First Name</label>
+                        <input
+                            class="w-full rounded-[14px] border border-white/20 bg-black/20 p-3.5 text-[14px] text-text outline-none transition focus:border-[rgba(56,189,248,.55)] focus:shadow-[0_0_0_6px_rgba(56,189,248,.12)] focus:bg-black/30"
+                            type="text" id="firstName" name="fName" placeholder="Enter your first name" required />
+                    </div>
+
+                    <div class="my-3.5">
+                        <label class="mb-2 block text-[14px] font-bold text-white/90" for="lastName">Last Name</label>
+                        <input
+                            class="w-full rounded-[14px] border border-white/20 bg-black/20 p-3.5 text-[14px] text-text outline-none transition focus:border-[rgba(56,189,248,.55)] focus:shadow-[0_0_0_6px_rgba(56,189,248,.12)] focus:bg-black/30"
+                            type="text" id="lastName" name="lName" placeholder="Enter your last name" required />
+                    </div>
+                </div>
+
+                <div class="my-3.5">
+                    <label class="mb-2 block text-[14px] font-bold text-white/90" for="emailAddress">Email
+                        Address</label>
+                    <input
+                        class="w-full rounded-[14px] border border-white/20 bg-black/20 p-3.5 text-[14px] text-text outline-none transition focus:border-[rgba(56,189,248,.55)] focus:shadow-[0_0_0_6px_rgba(56,189,248,.12)] focus:bg-black/30"
+                        type="email" id="emailAddress" name="email" placeholder="your.email@example.com" required />
+                </div>
+
+                <div class="my-3.5">
+                    <label class="mb-2 block text-[14px] font-bold text-white/90" for="phone">Phone Number</label>
+                    <input
+                        class="w-full rounded-[14px] border border-white/20 bg-black/20 p-3.5 text-[14px] text-text outline-none transition focus:border-[rgba(56,189,248,.55)] focus:shadow-[0_0_0_6px_rgba(56,189,248,.12)] focus:bg-black/30"
+                        type="tel" id="phone" name="phoneNumber" inputmode="numeric" pattern="[0-9]{11}" maxlength="11"
+                        placeholder="01234567890" required />
+                </div>
+
+                <div class="my-3.5">
+                    <label class="mb-2 block text-[14px] font-bold text-white/90" for="membership">Membership
+                        Type</label>
+                    <select
+                        class="w-full rounded-[14px] border border-white/20 bg-black/20 p-3.5 text-[14px] text-text outline-none transition focus:border-[rgba(56,189,248,.55)] focus:shadow-[0_0_0_6px_rgba(56,189,248,.12)] focus:bg-black/30"
+                        name="membershipType" id="membership" required>
+                        <option value="basic" selected>Basic Membership - $29/month</option>
+                        <option value="premium">Premium Membership - $49/month</option>
+                        <option value="vip">VIP Membership - $79/month</option>
+                    </select>
+                </div>
+
+                <div class="my-3.5">
+                    <label class="mb-2 block text-[14px] font-bold text-white/90" for="goals">Fitness Goals</label>
+                    <textarea style="resize: none;"
+                        class="min-h-30 w-full resize-y rounded-[14px] border border-white/20 bg-black/20 p-3.5 text-[14px] text-text outline-none transition focus:border-[rgba(56,189,248,.55)] focus:shadow-[0_0_0_6px_rgba(56,189,248,.12)] focus:bg-black/30"
+                        rows="4" name="fitnessGoals" id="goals"
+                        placeholder="Tell us about your fitness goals and what you hope to achieve"></textarea>
+                </div>
+
+                <button type="submit"
+                    class="w-full rounded-[14px] bg-linear-to-br from-accent2 to-accent3 px-8 py-4 text-[18px] font-extrabold text-[#0b0d13] transition-transform duration-200 hover:scale-105">
+                    Join FitCore Today
+                </button>
+
+                <p class="mt-3 text-center text-[12px] leading-[1.6] text-muted2">
+                    By submitting this form, you agree to our terms of service and privacy policy.
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10 bg-white/5 py-14 pb-14">
+        <div class="mx-auto grid w-[92%] max-w-280 grid-cols-1 gap-4.5 lg:grid-cols-[2fr_1fr_1.2fr]">
+            <div>
+                <div class="mb-3 inline-flex items-center gap-4">
+                    <span
+                        class="h-3.5 w-3.5 rounded-full bg-linear-to-br from-accent to-accent2 shadow-[0_0_0_10px_rgba(124,58,237,.15)]"></span>
+                    <span class="text-[28px] font-extrabold tracking-[.3px]">FitCore</span>
+                </div>
+                <p class="leading-[1.8] text-muted">
+                    Transform your body and mind at our premium fitness facility. Join thousands of members who have
+                    achieved
+                    their goals with expert guidance and state-of-the-art equipment.
+                </p>
+
+                <!-- ✅ Social with icons -->
+                <div class="mt-4 flex flex-wrap gap-3">
+                    <a class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2.5 text-[13px] font-bold text-muted2 hover:bg-white/10 hover:text-text"
+                        href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2.5 text-[13px] font-bold text-muted2 hover:bg-white/10 hover:text-text"
+                        href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2.5 text-[13px] font-bold text-muted2 hover:bg-white/10 hover:text-text"
+                        href="#" aria-label="Twitter/X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="mb-3 mt-1 text-[16px] font-extrabold">Quick Links</h4>
+                <a class="block py-2.5 font-semibold text-muted hover:text-text" href="#choose">Why Choose Us</a>
+                <a class="block py-2.5 font-semibold text-muted hover:text-text" href="#programs">Programs</a>
+                <a class="block py-2.5 font-semibold text-muted hover:text-text" href="#pricing">Pricing</a>
+                <a class="block py-2.5 font-semibold text-muted hover:text-text" href="#testimonials">Reviews</a>
+                <a class="block py-2.5 font-semibold text-muted hover:text-text" href="#join">Membership Form</a>
+            </div>
+
+            <div>
+                <h4 class="mb-3 mt-1 text-[16px] font-extrabold">Contact Info</h4>
+                <div class="mb-3">
+                    <h5 class="mb-1 text-[13px] font-bold text-white/90">Address</h5>
+                    <p class="leading-[1.7] text-muted">123 Fitness Street, Downtown City, DC 12345</p>
+                </div>
+                <div class="mb-3">
+                    <h5 class="mb-1 text-[13px] font-bold text-white/90">Phone</h5>
+                    <p class="leading-[1.7] text-muted">(555) 123-4567</p>
+                </div>
+                <div class="mb-3">
+                    <h5 class="mb-1 text-[13px] font-bold text-white/90">Hours</h5>
+                    <p class="leading-[1.7] text-muted">Open 24/7</p>
+                </div>
+            </div>
+
+            <div
+                class="col-span-1 mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-white/10 pt-4 text-[12px] text-muted2 lg:col-span-3">
+                <p>&copy; 2025 FitCore Gym. All rights reserved.</p>
+                <div class="flex flex-wrap gap-3">
+                    <a class="font-bold text-muted2 hover:text-text" href="#">Privacy Policy</a>
+                    <a class="font-bold text-muted2 hover:text-text" href="#">Terms of Service</a>
+                    <a class="font-bold text-muted2 hover:text-text" href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <a href="#top" aria-label="Back to top"
+        class="to-top fixed end-4.5 bottom-4.5 z-50 flex h-11.5 w-11.5 items-center justify-center rounded-[14px] border border-white/15 bg-white/10 text-text shadow-[0_18px_45px_rgba(0,0,0,.22)] opacity-0 pointer-events-none translate-y-2 transition duration-200">
+        ↑
+    </a>
+</body>
+
+</html>
